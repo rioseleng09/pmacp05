@@ -5,11 +5,11 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 import pickle
+import os
 
-# Load model architecture from JSON file
-model_json_path = os.path.join(os.path.dirname(__file__), 'model.json')
-with open(model_json_path, 'r') as json_file:
-    loaded_model_json = json_file.read()
+# Specify the directory where the model.json file is located
+current_directory = os.path.dirname(os.path.abspath(__file__))
+model_json_path = os.path.join(current_directory, 'model.json')
 
 # Close the JSON file
 model = tf.keras.models.model_from_json(loaded_model_json)
