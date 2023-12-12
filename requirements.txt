@@ -2,4 +2,4 @@ streamlit
 keras
 mahotas
 pillow
-tensorflow 2.14.0
+tensorflow==2.14.0
