@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-pip install tensorflow
 from tensorflow.keras.models import model_from_json
 import pickle
 
