@@ -3,7 +3,6 @@ subprocess.call(["pip", "install", "tensorflow==2.14.0"])
 import streamlit as st
 import numpy as np
 from PIL import Image
-import tensorflow as tf
 from tensorflow.keras.models import load_model
 import pickle
 
