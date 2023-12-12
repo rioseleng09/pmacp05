@@ -15,7 +15,7 @@ with open(model_json_path, 'r') as json_file:
 model = tf.keras.models.model_from_json(loaded_model_json)
 
 # Load weights into the new model
-model.load_weights("pmacp05.h5")
+model.load_weights("model.h5")
 
 # Function to preprocess the image for diagnosis
 def preprocess_image(img_path):
