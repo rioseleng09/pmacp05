@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-from keras.models import model_from_json
+from tensorflow.keras.models import model_from_json
 import pickle
 
 # Function to preprocess the image for diagnosis
