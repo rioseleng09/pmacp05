@@ -11,7 +11,7 @@ import os
 model_json_path = os.path.join(os.path.dirname(__file__), 'model.json')
 
 with open(model_json_path, 'r') as json_file:
-    loaded_model_json = json_file.read('model.json')
+    loaded_model_json = json_file.read()
 
 print("Loaded Model JSON:")
 print(loaded_model_json)
