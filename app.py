@@ -1,8 +1,19 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-from tensorflow.keras.models import model_from_json
+import tensorflow as tf
+from tensorflow.keras.models import load_model
 import pickle
+
+# Load model architecture from JSON file
+with open('model.json', 'r') as json_file:
+    loaded_model_json = json_file.read()
+
+# Close the JSON file
+model = tf.keras.models.model_from_json(loaded_model_json)
+
+# Load weights into the new model
+model.load_weights("pmacp05.h5")
 
 # Function to preprocess the image for diagnosis
 def preprocess_image(img_path):
