@@ -7,7 +7,8 @@ from tensorflow.keras.models import load_model
 import pickle
 
 # Load model architecture from JSON file
-with open('model.json', 'r') as json_file:
+model_json_path = os.path.join(os.path.dirname(__file__), 'model.json')
+with open(model_json_path, 'r') as json_file:
     loaded_model_json = json_file.read()
 
 # Close the JSON file
